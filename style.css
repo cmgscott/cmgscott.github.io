@@ -2,13 +2,13 @@ body {
     font-family: arial, helvetica, sans-serif;
     font-size: 14px;
     color: purple;
-    background-color: #ffe;
+    background-color: #00d0ff;
     margin: 20px;
     padding: 0; }
     /* button test */
 a.button1{
     display:inline-block;
-    padding:0.35em 1.2em;
+    padding:2em 4em;
     border:0.1em solid #FFFFFF;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
@@ -16,7 +16,7 @@ a.button1{
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#FFFFFF;
+    color:#ff0000;
     text-align:center;
     transition: all 0.2s;
 }
