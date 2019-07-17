@@ -3,7 +3,7 @@ body {
     font-size: 14px;
     color: purple;
     background-color: #00d0ff;
-    margin: 20px;
+    margin: 2px;
     padding: 0; }
     /* button test */
 a.button1{
@@ -40,3 +40,4 @@ h1 {
     background-color: #900;
     font-size: 2em;
 }
+

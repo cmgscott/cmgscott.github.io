@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>JSON editor test</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="jsoneditor.min.js"></script>
+    <style>
+      .center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+      }
+      #jsoneditor {
+          width: 500px;
+          height: 500px;
+      }
+    </style>
+    <link rel="stylesheet" href="style2.css">
+</head>
 <body>
-  <h1>Page 1</h1>
+<p>
+    <button id="setJSON">Edit JSON</button>
+    <button id="getJSON">Send JSON</button>
+</p>
+  <h1>JSON editor test</h1>
+  <div id="jsoneditor"></div>
+
+  <script>
+      var container = document.getElementById("jsoneditor");
+      var options = {
+          mode: 'tree'
+      };
+      var editor = new JSONEditor(container, options);
+
+      document.getElementById('setJSON').onclick = function() {
+
+          var json = {
+              "host": null,
+              "container": null,
+              "external": null,
+              "internal": null,
+              "command": null,
+              "image": null,
+              "nested object": {
+                  "1": null,
+                  "2": null,
+                  "3": null
+              }
+          };
+          editor.set(json);
+
+      };
+
+      // get json
+      document.getElementById('getJSON').onclick = function () {
+          var json = editor.get();
+          alert(JSON.stringify(json, null, 2));
+      };
+      // function getJSON() {
+      //     var json = editor.get();
+      //     alert(JSON.stringify(json, null, 2));
+      // }
+  </script>
 </body>
 </html>
